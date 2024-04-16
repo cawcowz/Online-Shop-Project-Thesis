@@ -1,0 +1,127 @@
+*
+{
+    font-family:"Poppins",sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+    list-style: none;
+    text-decoration:none;
+}
+
+/* variables */
+
+:root
+{
+    --main-color : #9b5c41;
+    --light-color: #e1b955;
+    --text-color : #2e2e2e;
+    --hover-color : hsl(18,41%,38%);
+    --bg-color : #fff;
+
+}
+
+.newsletter{
+    /* background: #f1f1f1; */
+    width: 100%;
+    height: 100vh;
+}
+.newsletter-content{
+    display: grid;
+    /* grid-template-columns: repeat(2,1fr); */
+    align-items: center;
+    gap: 1.5rem;
+    /* background: #f1f1f1; */
+    max-width: 400px;
+    transform: translate(0px, 5rem);
+    margin: auto;   
+    height: 600px;
+    border: 0.5px solid rgb(35, 35, 35);
+    box-shadow: #363636 0 0 3px;
+    transition: 0.5s ease-in-out;
+}
+.newsletter-text{
+    font-size: 1.4rem;
+    margin: auto;
+    /* margin-top: 3rem; */
+}
+.newsletter-content form{
+    display: grid;
+    grid-template-columns: 1fr 0,4fr;
+    column-gap: 1rem;
+}
+.newsletter-content form input{
+    border: none;
+    padding: 15px;
+    outline-color:#d0011b ;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);   
+    width: 350px;
+    margin: auto;
+    margin-top: 1rem;
+    border-bottom:0.5px solid gray;
+}   
+.newsletter-content form input::placeholder{
+    font-size: 1rem;
+}
+.newsletter-content form .btn{
+    text-transform: uppercase;
+    color: var(--bg-color);
+    cursor: pointer;
+    margin-bottom: 20px;
+    background:#363636 ;
+}
+.newsletter-content form a{
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-content:hover{
+    box-shadow: 0 0 15px #d0011b ;
+    transition: 0.5s ease-in-out;
+}
+.newsletter-content:hover input{
+    border: 0.3px solid #d0011b;
+    transition: 0.5s ease-in-out;
+}
+.newsletter-content:hover .btn{
+   background: #d0011b;
+    transition: 0.5s ease-in-out;
+}
+
+.error{
+    color: #d0011b;
+    /* border: solid 2px rgb(251, 243, 0); */
+    padding: 15px;
+    width: 350px;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+
+@media (max-width:1074px) {
+    .newsletter-content{
+        width: 43%;
+    }
+
+}
+
+@media (max-width:644px) {
+    .newsletter-content{
+        width: 53%;
+    }   
+    .newsletter-content form input{
+        border: none;
+        padding: 15px;
+        outline-color:var(--main-color) ;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        color: var(--text-color);
+        width: 300px;
+        margin: auto;
+        margin-top: 2rem;
+    } 
+}
